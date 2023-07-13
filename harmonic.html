@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Harmonic wave</title>
+    <link rel="stylesheet" href="styleHarmonic.css">
+  </head>
+  <body>
+<div class="main">
+      <h2>Harmonic wave simulation</h2>
+  <div class="controls-div">
+    <div class="slider">
+      <p>Frequency:</p>
+      <input class="bar" type="range" id="frequencyinput" min="1" max="10" step="0.1" value="2" onchange="frequencyvalue.value=value"/>
+      <output id="frequencyvalue">2</output>
+      <span>Hz</span>
+    </div>
+    <div class="slider">
+    <p>Amplitude:</p>
+    <input class="bar" type="range" id="amplitudeinput" min="1" max="180" value="50" onchange="amplitudevalue.value=value"/>
+    <output id="amplitudevalue">50</output>
+    <span>m</span>
+     </div>
+     <div class="slider">
+       <p>Period: </p>
+       <p id="wave-period-info">0.25s</p>
+     </div>
+     <div class="buttons">
+       <button type="button" name="button" id="start-button" onclick="startAnimation()">Start</button>
+       <button type="button" name="button" id="stop-button" onclick="endAnimation()">Stop</button>
+       <button type="button" name="button" id="reset-button" onclick="resetAnimation()">Reset</button>
+       <a class="home-link" href="index.html">Menu</a>
+     </div>
+  </div>
+<div class="canvas-div">
+<canvas id="canvas-bottom" width="1000" height="370"></canvas>
+<canvas id="canvas" width="1000" height="370"></canvas>
+</div>
+<div class="extra-controls">
+  <div class="radios">
+       <p>Show amplitude height:</p>
+       <input type="radio" id="radio-one" name="switch-amp" value="yes" onchange="radioChangeAmplitude(this);" />
+       <label for="radio-one">Yes</label>
+       <input type="radio" id="radio-two" name="switch-amp" value="no" onchange="radioChangeAmplitude(this);" checked/>
+       <label for="radio-two">No</label>
+   </div>
+   <div class="radios">
+        <p>Show equilibrium:</p>
+        <input type="radio" id="radio-three" name="switch-equ" value="yes" onchange="radioChangeEquilibrium(this);" checked/>
+        <label for="radio-three">Yes</label>
+        <input type="radio" id="radio-four" name="switch-equ" value="no" onchange="radioChangeEquilibrium(this);" />
+        <label for="radio-four">No</label>
+    </div>
+    <div class="radios">
+      <p>Animation speed:</p>
+      <input type="radio" id="radio-slow-speed" name="switch-speed" value="slow" onchange="radioChangeSpeed(this);" />
+      <label for="radio-slow-speed">Slow</label>
+      <input type="radio" id="radio-normal-speed" name="switch-speed" value="normal" onchange="radioChangeSpeed(this);" checked/>
+      <label for="radio-normal-speed">Normal</label>
+      <input type="radio" id="radio-fast-speed" name="switch-speed" value="fast" onchange="radioChangeSpeed(this);" />
+      <label for="radio-fast-speed">Fast</label>
+    </div>
+</div>
+</div>
+    <script type="text/javascript" src="scriptHarmonic.js">
+    </script>
+  </body>
+</html>

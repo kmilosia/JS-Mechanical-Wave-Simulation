@@ -1,0 +1,51 @@
+body{
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  background-size: cover;
+  background: black;
+  font-family: sans-serif;
+  font-size: 1.4em;
+}
+.main
+{
+background: gainsboro;
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 90%;
+height: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+flex-direction: column;
+}
+a{
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 40px;
+  margin: 0px 0px 0px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+}
+a:hover{
+  background: mediumblue;
+}
+.subtext{
+  position: absolute;
+  bottom: 0;
+  left:20px;
+  font-size: 0.7em;
+  font-style: italic;
+}
